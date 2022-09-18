@@ -93,4 +93,12 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean existsPhone(int phoneNumber) {
+    }
+
+    public String getContact(int phoneNumber) {
+    }
+
+    public boolean hasSameContacts() {
+    }
 }
