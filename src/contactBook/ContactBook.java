@@ -93,10 +93,19 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public int getIndexPhone(int phoneNumber) {
+        for(int i = 0; i < counter; i++)
+            if (contacts[i].getPhone() == phoneNumber)
+                return i;
+        return -1;
+    }
+
     public boolean existsPhone(int phoneNumber) {
+        return getIndexPhone(phoneNumber) >= 0;
     }
 
     public String getContact(int phoneNumber) {
+        return contacts[getIndexPhone(phoneNumber)].getName();
     }
 
     public boolean hasSameContacts() {
